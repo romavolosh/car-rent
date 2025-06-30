@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Політика Cookie — Thessalonikicar</title>
+  <meta
+    name="description"
+    content="Політика використання Cookie на сайті Thessalonikicar. Дізнайтеся про типи cookies та як ними керувати."
+  />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fff;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 1rem 2rem;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .logo img {
+      width: 28px;
+      height: 28px;
+      margin-right: 0.5rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #666;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #333;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .policy-container {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 3rem 2rem;
+    }
+
+    .policy-header {
+      margin-bottom: 3rem;
+    }
+
+    .policy-header h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .policy-header p {
+      color: #666;
+      font-size: 1.1rem;
+    }
+
+    .policy-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .policy-section h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    .policy-section p {
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .cookie-types {
+      margin: 1.5rem 0;
+    }
+
+    .cookie-type {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: #fafafa;
+      border-radius: 6px;
+      border-left: 4px solid #3bb273;
+    }
+
+    .cookie-type::before {
+      content: "✓";
+      color: #3bb273;
+      font-weight: bold;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .cookie-type-content {
+      flex: 1;
+    }
+
+    .cookie-type-content strong {
+      color: #333;
+      font-weight: 600;
+    }
+
+    .cookie-type-content p {
+      margin: 0.5rem 0 0 0;
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .last-updated {
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 1px solid #e5e5e5;
+      margin-top: 3rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: #3bb273;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #666;
+      font-size: 0.9rem;
+      border-top: 1px solid #e5e5e5;
+      margin-top: 3rem;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      header {
+        padding: 1rem;
+      }
+
+      .header-content {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav {
+        gap: 1.5rem;
+      }
+
+      main {
+        padding: 2rem 1rem;
+      }
+
+      .policy-container {
+        padding: 2rem 1rem;
+      }
+
+      .policy-header h1 {
+        font-size: 1.75rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .policy-header h1 {
+        font-size: 1.5rem;
+      }
+
+      .policy-container {
+        padding: 1.5rem 1rem;
+      }
+
+      .cookie-type {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .cookie-type::before {
+        align-self: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <img src="./img/favicon.png" alt="Thessalonikicar">
+        Thessalonikicar
+      </a>
+      <nav>
+        <a href="index.html">Головна</a>
+        <a href="contacts.html">Контакти</a>
+        <a href="about.html">Про нас</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="policy-container">
+      <div class="policy-header">
+        <h1>Політика Cookie</h1>
+        <p>Цей веб-сайт використовує cookies для покращення вашого досвіду перегляду та збору анонімних даних про використання сайту.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>Що таке Cookies?</h2>
+        <p>Cookies — це невеликі текстові файли, які зберігаються на вашому пристрої браузером. Вони допомагають веб-сайтам правильно функціонувати та аналізувати поведінку відвідувачів.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>Типи Cookies, які ми використовуємо</h2>
+        <div class="cookie-types">
+          <div class="cookie-type">
+            <div class="cookie-type-content">
+              <strong>Основні cookies:</strong>
+              <p>Необхідні для основної функціональності сайту.</p>
+            </div>
+          </div>
+          
+          <div class="cookie-type">
+            <div class="cookie-type-content">
+              <strong>Аналітичні cookies:</strong>
+              <p>Використовуються для розуміння того, як відвідувачі взаємодіють з сайтом (наприклад, Google Analytics).</p>
+            </div>
+          </div>
+          
+          <div class="cookie-type">
+            <div class="cookie-type-content">
+              <strong>Функціональні cookies:</strong>
+              <p>Запам'ятовують ваші налаштування або мову.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="policy-section">
+        <h2>Як керувати Cookies</h2>
+        <p>Ви можете налаштувати параметри cookies у вашому браузері. Більшість браузерів дозволяють вам блокувати або видаляти cookies повністю.</p>
+        <p>Для отримання більш детальної інформації зв'яжіться з нами або зверніться до розділу довідки вашого браузера.</p>
+      </div>
+
+      <div class="last-updated">
+        <p>Останнє оновлення: травень 2025</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <small>&copy; 2025 Thessalonikicar</small>
+  </footer>
+</body>
+</html>
