@@ -1,424 +1,1044 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Оренда авто в Салоніках — Thessalonikicar</title>
-  <meta
-    name="description"
-    content="Оренда авто в Салоніках. Швидко, просто, вигідно. Широкий вибір автомобілів за найкращими цінами."
-  />
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-  />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оренда авто в Салоніках — Thessalonikicar</title>
+    <meta
+      name="description"
+      content="Оренда авто в Салоніках. Швидко, просто, вигідно. Широкий вибір автомобілів за найкращими цінами."
+    />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #fff;
-    }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #fff;
+      }
 
-    header {
-      background: #fff;
-      border-bottom: 1px solid #e5e5e5;
-      padding: 1rem 2rem;
-    }
-
-    .header-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      font-weight: 600;
-      font-size: 1.25rem;
-      color: #333;
-      text-decoration: none;
-    }
-
-    .logo img {
-      width: 28px;
-      height: 28px;
-      margin-right: 0.5rem;
-    }
-
-    nav {
-      display: flex;
-      gap: 2rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #666;
-      font-weight: 400;
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: #333;
-    }
-
-    nav a.active {
-      color: #333;
-      font-weight: 500;
-    }
-
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
-    }
-
-    .hero-container {
-      background: #fff;
-      border: 1px solid #e5e5e5;
-      border-radius: 8px;
-      padding: 3rem 2rem;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .hero-header {
-      margin-bottom: 3rem;
-    }
-
-    .hero-header h1 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero-header h2 {
-      color: #666;
-      font-size: 1.25rem;
-      font-weight: 400;
-    }
-
-    .booking-section {
-      background: #fafafa;
-      border: 1px solid #e5e5e5;
-      border-radius: 8px;
-      padding: 2rem;
-      margin-bottom: 3rem;
-    }
-
-    .booking-header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .booking-header h3 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 0.5rem;
-    }
-
-    .booking-header p {
-      color: #666;
-      font-size: 1rem;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
-
-    .feature-card {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: 1.5rem;
-      border: 1px solid #e5e5e5;
-      border-radius: 8px;
-      background: #fff;
-    }
-
-    .feature-icon {
-      font-size: 1.5rem;
-      color: #3bb273;
-      width: 32px;
-      text-align: center;
-      margin-top: 0.25rem;
-      flex-shrink: 0;
-    }
-
-    .feature-content h4 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 0.5rem;
-    }
-
-    .feature-content p {
-      color: #666;
-      font-size: 0.95rem;
-    }
-
-    .cta-section {
-      text-align: center;
-      padding: 2rem 0;
-      border-top: 1px solid #e5e5e5;
-    }
-
-    .cta-section h3 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 1rem;
-    }
-
-    .cta-section p {
-      color: #666;
-      font-size: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 0.75rem 1.5rem;
-      border-radius: 4px;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 500;
-      transition: all 0.2s;
-    }
-
-    .btn-primary {
-      background: #333;
-      color: white;
-      border: 1px solid #333;
-    }
-
-    .btn-primary:hover {
-      background: #555;
-      border-color: #555;
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: #333;
-      border: 1px solid #333;
-    }
-
-    .btn-secondary:hover {
-      background: #333;
-      color: white;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #666;
-      font-size: 0.9rem;
-      border-top: 1px solid #e5e5e5;
-      margin-top: 3rem;
-    }
-
-    /* Mobile Responsive */
-    @media (max-width: 768px) {
       header {
-        padding: 1rem;
+        background: #fff;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 1rem 2rem;
       }
 
       .header-content {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      nav {
-        gap: 1.5rem;
-      }
-
-      main {
-        padding: 2rem 1rem;
-      }
-
-      .hero-container {
-        padding: 2rem 1rem;
-      }
-
-      .hero-header h1 {
-        font-size: 2rem;
-      }
-
-      .hero-header h2 {
-        font-size: 1.1rem;
-      }
-
-      .booking-section {
-        padding: 1.5rem 1rem;
-      }
-
-      .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-      }
-
-      .feature-card {
-        padding: 1rem;
-      }
-
-      .cta-buttons {
-        flex-direction: column;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
       }
 
-      .btn {
-        width: 100%;
-        max-width: 300px;
+      .logo {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 1.25rem;
+        color: #333;
+        text-decoration: none;
       }
-    }
 
-    @media (max-width: 480px) {
+      .logo img {
+        width: 28px;
+        height: 28px;
+        margin-right: 0.5rem;
+      }
+
       nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
+        display: flex;
+        gap: 2rem;
       }
 
-      .features-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+      nav a {
+        text-decoration: none;
+        color: #666;
+        font-weight: 400;
+        transition: color 0.2s;
       }
 
-      .hero-header h1 {
-        font-size: 1.75rem;
+      nav a:hover {
+        color: #333;
       }
 
-      .hero-header h2 {
-        font-size: 1rem;
+      nav a.active {
+        color: #333;
+        font-weight: 500;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
       }
 
       .hero-container {
-        padding: 1.5rem 1rem;
+        background: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        padding: 3rem 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .hero-header {
+        margin-bottom: 3rem;
+      }
+
+      .hero-header h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 0.5rem;
+      }
+
+      .hero-header h2 {
+        color: #666;
+        font-size: 1.25rem;
+        font-weight: 400;
       }
 
       .booking-section {
-        padding: 1rem;
+        background: #fafafa;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        padding: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .booking-header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .booking-header h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 0.5rem;
+      }
+
+      .booking-header p {
+        color: #666;
+        font-size: 1rem;
+      }
+
+      .content-section {
+        background: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .section-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-icon {
+        width: 60px;
+        height: 60px;
+        background: #3bb273;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+      }
+
+      .section-title {
+        flex: 1;
+      }
+
+      .section-title h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 0.25rem;
+      }
+
+      .section-title p {
+        color: #666;
+        font-size: 1rem;
+      }
+
+      .two-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .location-map {
+        background: #f8f9fa;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        padding: 1.5rem;
+        text-align: center;
+        min-height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .location-map i {
+        font-size: 3rem;
+        color: #3bb273;
+        margin-bottom: 1rem;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
       }
 
       .feature-card {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.5rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1.5rem;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        background: #fff;
       }
 
       .feature-icon {
-        align-self: center;
+        font-size: 1.5rem;
+        color: #3bb273;
+        width: 32px;
+        text-align: center;
+        margin-top: 0.25rem;
+        flex-shrink: 0;
       }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="header-content">
-      <a href="index.html" class="logo">
-        <img src="./img/favicon.png" alt="Thessalonikicar">
-        Thessalonikicar
-      </a>
-      <nav>
-        <a href="index.html" class="active">Головна</a>
-        <a href="contacts.html">Контакти</a>
-        <a href="about.html">Про нас</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <div class="hero-container">
-      <div class="hero-header">
-        <h1>Оренда авто в Салоніках</h1>
-        <h2>Швидко, просто, вигідно</h2>
+      .feature-content h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 0.5rem;
+      }
+
+      .feature-content p {
+        color: #666;
+        font-size: 0.95rem;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .stat-card {
+        text-align: center;
+        padding: 1.5rem;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        background: #fafafa;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #3bb273;
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        color: #666;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .pricing-table {
+        overflow-x: auto;
+        margin: 2rem 0;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      th,
+      td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      th {
+        background: #3bb273;
+        color: white;
+        font-weight: 600;
+      }
+
+      tr:nth-child(even) {
+        background: #f8f9fa;
+      }
+
+      .process-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+
+      .step-card {
+        text-align: center;
+        padding: 2rem 1rem;
+        position: relative;
+      }
+
+      .step-number {
+        width: 50px;
+        height: 50px;
+        background: #3bb273;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 auto 1rem;
+      }
+
+      .step-card h4 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 0.5rem;
+      }
+
+      .faq-section {
+        margin: 2rem 0;
+      }
+
+      .faq-item {
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+      }
+
+      .faq-question {
+        background: #f8f9fa;
+        padding: 1.5rem;
+        cursor: pointer;
+        font-weight: 600;
+        color: #333;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .faq-answer {
+        padding: 1.5rem;
+        color: #666;
+        background: white;
+      }
+
+      .brands-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+        margin: 2rem 0;
+      }
+
+.brands-marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  padding: 10px 0;
+}
+
+.brands-marquee {
+  display: flex;
+  width: max-content;
+  animation: scroll-marquee 20s linear infinite;
+}
+
+.brand-logo {
+  flex: 0 0 auto;
+  text-align: center;
+  margin: 0 30px;
+}
+
+.brand-logo img {
+  max-width: 80px;
+  max-height: 40px;
+  display: block;
+  margin: 0 auto 5px;
+}
+
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+      .brand-logo {
+        background: #f8f9fa;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        padding: 1rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        min-height: 120px;
+        font-weight: 600;
+        color: #666;
+        font-size: 0.9rem;
+      }
+
+      .cta-section {
+        text-align: center;
+        padding: 2rem 0;
+        border-top: 1px solid #e5e5e5;
+      }
+
+      .cta-section h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      .cta-section p {
+        color: #666;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+
+      .btn-primary {
+        background: #3bb273;
+        color: white;
+        border: 1px solid #3bb273;
+      }
+
+      .btn-primary:hover {
+        background: #2d8a5a;
+        border-color: #2d8a5a;
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: #333;
+        border: 1px solid #333;
+      }
+
+      .btn-secondary:hover {
+        background: #333;
+        color: white;
+      }
+
+      .testimonials {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .testimonial-card {
+        background: #f8f9fa;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .testimonial-stars {
+        color: #ffc107;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        color: #666;
+        margin-bottom: 1rem;
+      }
+
+      .testimonial-author {
+        font-weight: 600;
+        color: #333;
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem;
+        color: #666;
+        font-size: 0.9rem;
+        border-top: 1px solid #e5e5e5;
+        margin-top: 3rem;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        header {
+          padding: 1rem;
+        }
+
+        .header-content {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        nav {
+          gap: 1.5rem;
+        }
+
+        main {
+          padding: 2rem 1rem;
+        }
+
+        .hero-container {
+          padding: 2rem 1rem;
+        }
+
+        .hero-header h1 {
+          font-size: 2rem;
+        }
+
+        .hero-header h2 {
+          font-size: 1.1rem;
+        }
+
+        .booking-section {
+          padding: 1.5rem 1rem;
+        }
+
+        .two-column {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .stats-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .process-steps {
+          grid-template-columns: 1fr;
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .btn {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        nav {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 1rem;
+        }
+
+        .hero-header h1 {
+          font-size: 1.75rem;
+        }
+
+        .hero-header h2 {
+          font-size: 1rem;
+        }
+
+        .content-section {
+          padding: 1.5rem 1rem;
+        }
+
+        .stats-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .section-header {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <img src="./img/favicon.png" alt="Thessalonikicar" />
+          Thessalonikicar
+        </a>
+        <nav>
+          <a href="index.html" class="active">Головна</a>
+          <a href="contacts.html">Контакти</a>
+          <a href="about.html">Про нас</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="hero-container">
+        <div class="hero-header">
+          <h1>Оренда авто в Салоніках</h1>
+          <h2>Швидко, просто, вигідно</h2>
+        </div>
+
+        <div class="booking-section">
+          <div class="booking-header">
+            <h3>Забронюйте автомобіль</h3>
+            <p>Виберіть ідеальний автомобіль для вашої подорожі</p>
+          </div>
+          <!-- Кнопка бронювання -->
+          <script
+            src="https://static.localrent.com/booking/v2/wl/app.js"
+            defer
+            data-mrc-wl="true"
+            data-affiliate="10864"
+            data-country="18"
+            data-city="78321"
+            data-routing="off"
+            data-zindex="10000"
+          ></script>
+        </div>
       </div>
 
-      <div class="booking-section">
-        <div class="booking-header">
-          <h3>Забронюйте автомобіль</h3>
-          <p>Виберіть ідеальний автомобіль для вашої подорожі</p>
+      <!-- Why Choose Section -->
+      <div class="content-section">
+        <div class="section-header">
+          <div class="section-icon">
+            <i class="bi bi-award"></i>
+          </div>
+          <div class="section-title">
+            <h2>Чому обирають нас для оренди авто</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore.
+            </p>
+          </div>
         </div>
-        <!-- Кнопка бронювання -->
-        <script src="https://static.localrent.com/booking/v2/wl/app.js" defer data-mrc-wl="true" data-affiliate="10864" data-country="18" data-city="78321" data-routing="off" data-zindex="10000"></script>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-car-front"></i>
+            </div>
+            <div class="feature-content">
+              <h4>Широкий вибір автомобілів</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque habitant morbi tristique senectus et netus.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-clock"></i>
+            </div>
+            <div class="feature-content">
+              <h4>Швидке бронювання</h4>
+              <p>
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                posuere cubilia curae; Mauris viverra.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <div class="feature-content">
+              <h4>Повне страхування</h4>
+              <p>
+                Suspendisse potenti. Sed egestas, ante et vulputate volutpat,
+                eros pede semper est, vitae luctus metus.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-headset"></i>
+            </div>
+            <div class="feature-content">
+              <h4>Підтримка 24/7</h4>
+              <p>
+                Cras dapibus vivamus elementum semper nisi. Aenean vulputate
+                eleifend tellus lorem ipsum dolor.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="bi bi-car-front"></i>
+      <!-- Location Section -->
+      <div class="content-section">
+        <div class="section-header">
+          <div class="section-icon">
+            <i class="bi bi-geo-alt"></i>
           </div>
-          <div class="feature-content">
-            <h4>Широкий вибір</h4>
-            <p>Від економ-класу до преміум автомобілів. Знайдіть ідеальний варіант для вашої поїздки.</p>
-          </div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="bi bi-clock"></i>
-          </div>
-          <div class="feature-content">
-            <h4>Швидко і просто</h4>
-            <p>Бронювання за лічені хвилини. Без прихованих платежів та зайвих формальностей.</p>
+          <div class="section-title">
+            <h2>Де люди зазвичай орендують авто</h2>
+            <p>Найпопулярніші локації для оренди автомобілів в Салоніках</p>
           </div>
         </div>
 
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="bi bi-shield-check"></i>
-          </div>
-          <div class="feature-content">
-            <h4>Надійно і безпечно</h4>
-            <p>Всі автомобілі перевірені та застраховані. Ваша безпека — наш пріоритет.</p>
-          </div>
-        </div>
+        <div class="two-column">
+          <div>
+            <h3>Аеропорт SKG - найкращий вибір</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            </p>
 
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="bi bi-headset"></i>
+            <p>
+              Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </p>
+
+            <h4>Популярні локації:</h4>
+            <ul style="margin: 1rem 0; padding-left: 2rem">
+              <li>Аеропорт Салоніки (SKG)</li>
+              <li>Центр міста Салоніки</li>
+              <li>Залізничний вокзал</li>
+              <li>Порт Салоніки</li>
+              <li>Готелі та курорти</li>
+            </ul>
           </div>
-          <div class="feature-content">
-            <h4>Підтримка 24/7</h4>
-            <p>Наша команда завжди готова допомогти вам в будь-який час доби.</p>
+
+          <div class="location-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24262.47764185323!2d22.970881!3d40.523697!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a83fdc5465de29%3A0x7d30fcf00959c0dc!2sPort%20lotniczy%20Saloniki-Macedonia!5e0!3m2!1spl!2spl!4v1751290953532!5m2!1spl!2spl"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
 
-      <div class="cta-section">
-        <h3>Готові розпочати подорож?</h3>
-        <p>Зв'яжіться з нами або дізнайтеся більше про наші послуги</p>
-        <div class="cta-buttons">
-          <a href="contacts.html" class="btn btn-primary">Зв'язатися з нами</a>
-          <a href="about.html" class="btn btn-secondary">Про нас</a>
+      <!-- Statistics Section -->
+      <div class="content-section">
+        <div class="section-header">
+          <div class="section-icon">
+            <i class="bi bi-graph-up"></i>
+          </div>
+          <div class="section-title">
+            <h2>Наші досягнення в цифрах</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">10K+</div>
+            <div class="stat-label">Задоволених клієнтів</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">Автомобілів у флоті</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">15</div>
+            <div class="stat-label">Локацій видачі</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">99%</div>
+            <div class="stat-label">Рейтинг задоволеності</div>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
 
-  <footer>
-    <small>&copy; 2025 Thessalonikicar</small>
-  </footer>
-</body>
+      <!-- Pricing Section -->
+      <div class="content-section">
+        <div class="section-header">
+          <div class="section-icon">
+            <i class="bi bi-currency-euro"></i>
+          </div>
+          <div class="section-title">
+            <h2>Ціни на оренду автомобілів</h2>
+            <p>Прозорі ціни без прихованих платежів</p>
+          </div>
+        </div>
+
+        <div class="pricing-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Категорія</th>
+                <th>Модель</th>
+                <th>1 день</th>
+                <th>7 днів</th>
+                <th>30 днів</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Економ</td>
+                <td>Nissan Micra або схожий</td>
+                <td>€25</td>
+                <td>€150</td>
+                <td>€500</td>
+              </tr>
+              <tr>
+                <td>Компакт</td>
+                <td>Volkswagen Polo або схожий</td>
+                <td>€35</td>
+                <td>€210</td>
+                <td>€700</td>
+              </tr>
+              <tr>
+                <td>Стандарт</td>
+                <td>Toyota Corolla або схожий</td>
+                <td>€45</td>
+                <td>€270</td>
+                <td>€900</td>
+              </tr>
+              <tr>
+                <td>SUV</td>
+                <td>Nissan Qashqai або схожий</td>
+                <td>€65</td>
+                <td>€390</td>
+                <td>€1300</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Process Section -->
+      <div class="content-section">
+        <div class="section-header">
+          <div class="section-icon">
+            <i class="bi bi-list-check"></i>
+          </div>
+          <div class="section-title">
+            <h2>Як орендувати автомобіль</h2>
+            <p>Простий процес у 4 кроки</p>
+          </div>
+        </div>
+
+        <div class="process-steps">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h4>Оберіть авто</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h4>Заповніть форму</h4>
+            <p>
+              Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h4>Отримайте підтвердження</h4>
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+              irure dolor in reprehenderit.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h4>Заберіть авто</h4>
+            <p>
+              In voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brands Section -->
+      <div class="content-section">
+        <div class="section-header">
+          <div class="section-icon">
+            <i class="bi bi-star"></i>
+          </div>
+          <div class="section-title">
+            <h2>Автомобілі провідних брендів</h2>
+            <p>Співпрацюємо з найкращими виробниками</p>
+          </div>
+        </div>
+
+        <div class="brands-marquee-wrapper">
+  <div class="brands-marquee">
+    <!-- Оригінальні логотипи -->
+    <div class="brand-logo"><img src="img/toyota-logo.png"><div>TOYOTA</div></div>
+    <div class="brand-logo"><img src="img/nissan-logo.png"><div>NISSAN</div></div>
+    <div class="brand-logo"><img src="img/volkswagen-logo.png"><div>VOLKSWAGEN</div></div>
+    <div class="brand-logo"><img src="img/ford-logo.png"><div>FORD</div></div>
+    <div class="brand-logo"><img src="img/hyundai-logo.png"><div>HYUNDAI</div></div>
+    <div class="brand-logo"><img src="img/peugeot-logo.png"><div>PEUGEOT</div></div>
+    <div class="brand-logo"><img src="img/renault-logo.png"><div>RENAULT</div></div>
+    <div class="brand-logo"><img src="img/opel-logo.png"><div>OPEL</div></div>
+
+    <!-- Клон логотипів для циклу -->
+    <div class="brand-logo"><img src="img/toyota-logo.png"><div>TOYOTA</div></div>
+    <div class="brand-logo"><img src="img/nissan-logo.png"><div>NISSAN</div></div>
+    <div class="brand-logo"><img src="img/volkswagen-logo.png"><div>VOLKSWAGEN</div></div>
+    <div class="brand-logo"><img src="img/ford-logo.png"><div>FORD</div></div>
+    <div class="brand-logo"><img src="img/hyundai-logo.png"><div>HYUNDAI</div></div>
+    <div class="brand-logo"><img src="img/peugeot-logo.png"><div>PEUGEOT</div></div>
+    <div class="brand-logo"><img src="img/renault-logo.png"><div>RENAULT</div></div>
+    <div class="brand-logo"><img src="img/opel-logo.png"><div>OPEL</div></div>
+  </div>
+  </div>
+</div>
+
+
+        <!-- FAQ Section -->
+        <div class="content-section">
+          <div class="section-header">
+            <div class="section-icon">
+              <i class="bi bi-question-circle"></i>
+            </div>
+            <div class="section-title">
+              <h2>Часті запитання</h2>
+              <p>Відповіді на найпопулярніші запитання про оренду авто</p>
+            </div>
+          </div>
+
+          <div class="faq-section">
+            <div class="faq-item">
+              <div class="faq-question">
+                Які документи потрібні для оренди?
+                <i class="bi bi-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Чи можна скасувати бронювання?
+                <i class="bi bi-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Що включено в страхування?
+                <i class="bi bi-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                quae ab illo inventore veritatis et quasi architecto beatae
+                vitae dicta sunt.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Чи можна повернути авто в іншому місці?
+                <i class="bi bi-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                voluptatem sequi nesciunt.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="content-section">
+          <div class="section-header">
+            <div class="section-icon">
+              <i class="bi bi-chat-quote"></i>
+            </div>
+            <div class="section-title">
+              <h2>Відгуки наших клієнтів</h2>
+              <p>Що кажуть про нас наші клієнти</p>
+            </div>
+          </div>
+
+          <div class="testimonials">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <div class="testimonial-text">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
