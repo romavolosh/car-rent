@@ -581,7 +581,37 @@
           width: 100%;
           max-width: 300px;
         }
+
+        .pricing-table {
+          overflow-x: auto;
+        }
+        .pricing-table table {
+          min-width: 600px;
+          font-size: 0.95rem;
+        }
+        .pricing-table th,
+        .pricing-table td {
+          padding: 0.7rem 0.5rem;
+        }
       }
+
+@media (max-width: 768px) {
+  .pricing-table table {
+    min-width: 0;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .pricing-table th,
+  .pricing-table td {
+    padding: 0.5rem 0.3rem;
+    word-break: break-word;
+  }
+  .pricing-table th,
+  .pricing-table td {
+    width: auto;
+    max-width: 90px;
+  }
+}
 
       .rental-companies-tiles {
         display: flex;
@@ -1080,7 +1110,6 @@
             <thead>
               <tr>
                 <th>Категорія</th>
-                <th>Модель</th>
                 <th>1 день</th>
                 <th>7 днів</th>
                 <th>30 днів</th>
@@ -1089,28 +1118,24 @@
             <tbody>
               <tr>
                 <td>Економ</td>
-                <td>Nissan Micra або схожий</td>
                 <td>€25</td>
                 <td>€150</td>
                 <td>€500</td>
               </tr>
               <tr>
                 <td>Компакт</td>
-                <td>Volkswagen Polo або схожий</td>
                 <td>€35</td>
                 <td>€210</td>
                 <td>€700</td>
               </tr>
               <tr>
                 <td>Стандарт</td>
-                <td>Toyota Corolla або схожий</td>
                 <td>€45</td>
                 <td>€270</td>
                 <td>€900</td>
               </tr>
               <tr>
                 <td>SUV</td>
-                <td>Nissan Qashqai або схожий</td>
                 <td>€65</td>
                 <td>€390</td>
                 <td>€1300</td>
