@@ -703,6 +703,21 @@
           text-align: center;
         }
       }
+
+      @media (max-width: 768px) {
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .location-map iframe {
+    width: 100% !important;
+    height: 220px !important;
+    min-width: 0;
+  }
+  .two-column > div {
+    min-width: 0;
+  }
+}
     </style>
   </head>
   <body>
